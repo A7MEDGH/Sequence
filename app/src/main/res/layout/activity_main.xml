@@ -40,15 +40,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="120dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:hint="Name"
+                android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/btnName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="btnReady"
+                android:enabled="false"
 
+                android:onClick="btnReady"
                 android:text="READY" />
         </LinearLayout>
 

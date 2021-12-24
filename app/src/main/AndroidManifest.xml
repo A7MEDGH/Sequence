@@ -11,6 +11,7 @@
         android:theme="@style/Theme.Sequence">
         <activity
             android:name=".MainActivity5"
+            android:screenOrientation="landscape"
             android:exported="false" />
         <activity
             android:name=".MainActivity4"

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -70,11 +71,17 @@ public class MainActivity2 extends AppCompatActivity {
     CountDownTimer ct = new CountDownTimer(6000, 1500) {
 
         public void onTick(long millisUntilFinished) {
+            // mTextField.setText("seconds remaining: " + millisUntilFinished / 1500);
             oneButton();
+            //here you can have your logic to set text to edittext
         }
+
+
 
         @Override
         public void onFinish() {
+            for (int i = 0; i< arrayIndex; i++)
+                Log.d("game sequence", String.valueOf(gameSequence[i]));
             Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
             intent.putExtra("colorArray", colorArray);
             intent.putExtra("gameSequence", gameSequence);
